@@ -5,7 +5,7 @@ const Page=({currentPage, totalPages, previous, next})=>{
     return(
         <div style={{display:'flex', justifyContent:"space-around", alignItems:'center', width:300}}>
             <button onClick={previous} disabled={currentPage === 1}> Previous </button>
-            <button>{currentPage}</button>
+            <p>{currentPage}</p>
             <button disabled={currentPage === totalPages} onClick={next}> Next </button>
 
 
