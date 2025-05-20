@@ -14,6 +14,7 @@ function App() {
       setData(await response.json())
       
     }catch(e){
+      alert('failed to fetch Data')
       console.log(e)
     }  
   }
@@ -32,6 +33,8 @@ function App() {
     const next = ()=>{
         if(currentPage<Math.ceil(data.length/10)){
             setCurrentPage((prev)=>prev+1);
+        }else{
+          setCurrentPage((prev)=>prev-1);
         }
     }
     const previous = ()=>{
